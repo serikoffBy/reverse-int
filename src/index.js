@@ -1,3 +1,6 @@
 module.exports = function reverse (n) {
-   return +String(n).split('').reverse().join('');
+    if (n < 0) {
+        return -1 * (+String(n).slice(1).split('').reverse().join(''));
+    }
+    else return +String(n).split('').reverse().join('');
 }
